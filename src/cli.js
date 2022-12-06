@@ -1,7 +1,7 @@
-//import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync';
 
 const firstGame = (userName) => {
-    var readlineSync = require('readline-sync');
+    //var readlineSync = require('readline-sync');
     console.log("Welcome to the Brain Games!");
     userName = readlineSync.question('May I have your name? ');
     console.log('Hi ' + userName + '!');
