@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import firstGame  from '../src/cli.js';
+import firstGame from '../src/cli.js';
 
 firstGame();
