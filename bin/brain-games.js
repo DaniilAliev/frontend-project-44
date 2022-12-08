@@ -2,5 +2,8 @@
 /* eslint-disable import/extensions */
 
 import firstGame from '../src/cli.js';
+import brainEven from './brain-even.js';
 
-firstGame();
+// firstGame();
+
+brainEven();
