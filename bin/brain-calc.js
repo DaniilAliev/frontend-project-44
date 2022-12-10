@@ -16,12 +16,42 @@ const brainCalc = () => {
   let i = 0;
   const operations = ['+', '-', '*'];
   for (let index = 0; index < 6; index += 2) {
-    let operation = operations[Math.floor(Math.random() * operations.length)];
-    var resultArray = [arrRandom[index], operation, arrRandom[index + 1]];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    const resultArray = [arrRandom[index], operation, arrRandom[index + 1]];
     console.log(resultArray);
-    let resultString = resultArray.join(' ');
-    console.log(resultString);
+    const resultString = resultArray.join(' ');
+    console.log(`Question: ${resultString}`);
+    const answer = readlineSync.question('Your answer: ');
+    let result;
+
+    const calculation = (operation) => {
+      switch (operation) {
+        case ('+'):
+          result = arrRandom[index] + arrRandom[index + 1];
+          return result;
+        case ('-'):
+          result = arrRandom[index] - arrRandom[index + 1];
+          return result;
+        case ('*'):
+          result = arrRandom[index] * arrRandom[index + 1];
+        default:
+          return null;
+      }
+    };
+
+    calculation(operation);
+    if (result === Number(answer)) {
+      console.log('Correct!');
+      i += 1;
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'`);
+      console.log(`Let's try again, ${userName}!`);
+      break;
+    }
+  }
+  if (i === 3) {
+    console.log(`Congratulations, ${userName}!`);
   }
 };
 
-brainCalc()
+brainCalc();
