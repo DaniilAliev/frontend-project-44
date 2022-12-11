@@ -20,6 +20,7 @@ const getQuestionAndAnswer = () => {
       switch (operation) {
         case ('+'):
           correctAnswer = arrRandom[index] + arrRandom[index + 1];
+          return correctAnswer;
         case ('-'):
           correctAnswer = arrRandom[index] - arrRandom[index + 1];
           return correctAnswer;
