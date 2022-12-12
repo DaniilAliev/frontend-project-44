@@ -22,7 +22,9 @@ const playGame = (rule, getQuestionAndAnswer) => {
       break;
     }
 
-    console.log(`Congratulations, ${userName}!`);
+    if (correctAnswersCount === 3) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
 };
 

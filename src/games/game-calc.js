@@ -1,17 +1,17 @@
+/* eslint-disable no-unreachable-loop */
+/* eslint-disable import/extensions */
 
 import playGame from '../index.js';
 import randomNumbers from '../RandomNumber.js';
 
 const rule = 'What is the result of the expression?';
-
 const operations = ['+', '-', '*'];
-
-const arrRandom = randomNumbers();
-
 const getQuestionAndAnswer = () => {
-  for (let index = 0; index < 6; index += 2) {
+  for (let index = 0; index < 3; index += 2) {
+    const firstRandomNumber = randomNumbers();
+    const secondRandomNumber = randomNumbers();
     const operation = operations[Math.floor(Math.random() * operations.length)];
-    const questionArray = [arrRandom[index], operation, arrRandom[index + 1]];
+    const questionArray = [firstRandomNumber, operation, secondRandomNumber];
     const question = questionArray.join(' ');
 
     let correctAnswer;
@@ -19,21 +19,21 @@ const getQuestionAndAnswer = () => {
     const calculation = () => {
       switch (operation) {
         case ('+'):
-          correctAnswer = arrRandom[index] + arrRandom[index + 1];
+          correctAnswer = firstRandomNumber + secondRandomNumber;
           return correctAnswer;
         case ('-'):
-          correctAnswer = arrRandom[index] - arrRandom[index + 1];
+          correctAnswer = firstRandomNumber - secondRandomNumber;
           return correctAnswer;
         case ('*'):
-          correctAnswer = arrRandom[index] * arrRandom[index + 1];
-          return correctAnswer
+          correctAnswer = firstRandomNumber * secondRandomNumber;
+          return correctAnswer;
         default:
           return null;
       }
-   }
-   calculation();
-   return [question, String(correctAnswer)]
-  } 
+    };
+    calculation();
+    return [question, String(correctAnswer)];
+  }
 };
 
 const InitGameCalc = () => {
