@@ -15,10 +15,10 @@ const getQuestionAndAnswer = () => {
     progressionArray.push(nextNumber);
   }
   const a = Math.floor(Math.random() * progressionArray.length);
-  const rightAnswer = progressionArray[a];
+  const correctAnswer = progressionArray[a];
   progressionArray[a] = '..';
   const question = progressionArray.join(' ');
-  return [question, String(rightAnswer)];
+  return [question, String(correctAnswer)];
 };
 
 const InitGameProgression = () => {
