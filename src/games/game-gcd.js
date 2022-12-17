@@ -19,12 +19,13 @@ const getQuestionAndAnswer = () => {
       smallestNumber = secondRandomNumber;
     }
     for (let i = smallestNumber; i > 0; i -= 1) {
-      if (firstRandomNumber % i === 0) {
-        if (secondRandomNumber % i === 0) {
-          correctAnswer = i;
-          break;
-        }
+      if (firstRandomNumber % i === 0 && secondRandomNumber % i === 0) {
+        correctAnswer = i;
+        break;
       }
+    }
+    if (firstRandomNumber === secondRandomNumber) {
+      correctAnswer = firstRandomNumber;
     }
     return [question, String(correctAnswer)];
   }
