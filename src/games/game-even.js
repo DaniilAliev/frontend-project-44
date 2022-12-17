@@ -16,6 +16,7 @@ const getQuestionAndAnswer = () => {
     }
     return [number, answer];
   }
+  return '';
 };
 
 const InitGameEven = () => {

@@ -34,6 +34,7 @@ const getQuestionAndAnswer = () => {
     calculation();
     return [question, String(correctAnswer)];
   }
+  return '';
 };
 
 const InitGameCalc = () => {

@@ -29,6 +29,7 @@ const getQuestionAndAnswer = () => {
     }
     return [question, String(correctAnswer)];
   }
+  return '';
 };
 
 const InitGameGcd = () => {
