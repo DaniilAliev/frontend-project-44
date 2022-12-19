@@ -16,9 +16,9 @@ const makeProgression = (progressionArray, randNumber, increaseNumber) => {
 
 const getQuestionAndAnswer = () => {
   const progressionArray = [];
-  const randNumber = generateRandomNumber();
+  const randomNumber = generateRandomNumber();
   const increaseNumber = generateRandomNumber();
-  makeProgression(progressionArray, randNumber, increaseNumber);
+  makeProgression(progressionArray, randomNumber, increaseNumber);
   const a = Math.floor(Math.random() * progressionArray.length);
   const correctAnswer = progressionArray[a];
   progressionArray[a] = '..';
