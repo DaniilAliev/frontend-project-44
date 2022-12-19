@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 /* eslint-disable import/extensions */
-import InitGameGcd from '../src/games/game-gcd.js';
+import initGameGcd from '../src/games/game-gcd.js';
 
-InitGameGcd();
+initGameGcd();

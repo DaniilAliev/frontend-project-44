@@ -1,39 +1,39 @@
 /* eslint-disable no-unreachable-loop */
 /* eslint-disable import/extensions */
 import playGame from '../index.js';
-import randomNumbers from '../RandomNumber.js';
+import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
+let correctAnswer;
 
-const getQuestionAndAnswer = () => {
-  for (let index = 0; index < 3; index += 1) {
-    const firstRandomNumber = randomNumbers();
-    const secondRandomNumber = randomNumbers();
-    const questionArray = [`${firstRandomNumber} ${secondRandomNumber}`];
-    const question = questionArray.join(' ');
-    let correctAnswer;
-    let smallestNumber;
-    if (firstRandomNumber < secondRandomNumber) {
-      smallestNumber = firstRandomNumber;
-    } else if (secondRandomNumber < firstRandomNumber) {
-      smallestNumber = secondRandomNumber;
-    }
-    for (let i = smallestNumber; i > 0; i -= 1) {
-      if (firstRandomNumber % i === 0 && secondRandomNumber % i === 0) {
-        correctAnswer = i;
-        break;
-      }
-    }
-    if (firstRandomNumber === secondRandomNumber) {
-      correctAnswer = firstRandomNumber;
-    }
-    return [question, String(correctAnswer)];
+const countGsd = (firstrandomNumber, secondrandomNumber) => {
+  let smallestNumber;
+  if (firstrandomNumber < secondrandomNumber) {
+    smallestNumber = firstrandomNumber;
+  } else if (secondrandomNumber < firstrandomNumber) {
+    smallestNumber = secondrandomNumber;
   }
-  return '';
+  for (let i = smallestNumber; i > 0; i -= 1) {
+    if (firstrandomNumber % i === 0 && secondrandomNumber % i === 0) {
+      correctAnswer = i;
+      break;
+    }
+  }
+  if (firstrandomNumber === secondrandomNumber) {
+    correctAnswer = firstrandomNumber;
+  }
 };
 
-const InitGameGcd = () => {
+const getQuestionAndAnswer = () => {
+  const firstrandomNumber = generateRandomNumber();
+  const secondrandomNumber = generateRandomNumber();
+  const question = [`${firstrandomNumber} ${secondrandomNumber}`].join(' ');
+  countGsd(firstrandomNumber, secondrandomNumber);
+  return [question, String(correctAnswer)];
+};
+
+const initGameGcd = () => {
   playGame(rule, getQuestionAndAnswer);
 };
 
-export default InitGameGcd;
+export default initGameGcd;

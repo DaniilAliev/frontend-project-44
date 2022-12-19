@@ -1,6 +1,6 @@
-const randomNumbers = () => {
-  const RandomNumber = Math.round(Math.random() * 100);
-  return RandomNumber;
+const generateRandomNumber = () => {
+  const randomNumber = Math.round(Math.random() * 100);
+  return randomNumber;
 };
 
-export default randomNumbers;
+export default generateRandomNumber;

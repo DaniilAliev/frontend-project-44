@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/DaniilAliev/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/DaniilAliev/frontend-project-44/actions)",
+  "description": "[![Actions Status](https://github.com/DaniilAliev/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/DaniilAliev/frontend-project-44/actions)(Game to calculate exact result of predefined rule)",
   "main": "index.js",
   "type": "module",
   "scripts": {

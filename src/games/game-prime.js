@@ -1,18 +1,30 @@
 /* eslint-disable import/extensions */
 import playGame from '../index.js';
-import randomNumbers from '../RandomNumber.js';
+import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+let result;
+
+const isPrime = (randomNumber, i) => {
+  if (randomNumber % i === 0) {
+    result = true;
+  }
+  result = false;
+};
 
 const getQuestionAndAnswer = () => {
   let correctAnswer;
-  const randomNumber = randomNumbers();
+  const randomNumber = generateRandomNumber();
   let count = 0;
   if (randomNumber === 1) {
     correctAnswer = 'yes';
   }
   for (let i = 0; i < randomNumber; i += 1) {
     if (randomNumber % i === 0) {
+      isPrime(randomNumber, i);
+      if (result === true) {
+        correctAnswer = 'yes';
+      }
       count += 1;
     }
   }
@@ -24,8 +36,8 @@ const getQuestionAndAnswer = () => {
   return [randomNumber, correctAnswer];
 };
 
-const InitGamePrime = () => {
+const initGamePrime = () => {
   playGame(rule, getQuestionAndAnswer);
 };
 
-export default InitGamePrime;
+export default initGamePrime;

@@ -6,26 +6,22 @@ const playGame = (rule, getQuestionAndAnswer) => {
   console.log(`Hello, ${userName}!`);
   console.log(rule);
 
-  let correctAnswersCount = 0;
+  const roundsCount = 3;
 
-  while (correctAnswersCount < 3) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-      correctAnswersCount += 1;
     } else if (userAnswer !== correctAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
-      break;
-    }
-
-    if (correctAnswersCount === 3) {
-      console.log(`Congratulations, ${userName}!`);
+      return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default playGame;
