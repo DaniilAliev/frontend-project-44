@@ -9,8 +9,10 @@ let result;
 const isEven = (number) => {
   if (number % 2 === 0) {
     result = true;
+  } else {
+    result = false;
   }
-  result = false;
+  return result;
 };
 
 const getQuestionAndAnswer = () => {
