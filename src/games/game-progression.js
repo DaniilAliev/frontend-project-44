@@ -4,11 +4,10 @@ import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'What number is missing in the progression?';
 
-const makeProgression = (progressionArray, randNumber, increaseNumber) => {
-  progressionArray.push(randNumber);
+const makeProgression = (progressionArray, randomNumber, increaseNumber) => {
+  progressionArray.push(randomNumber);
   for (let i = 1; i < 10; i += 1) {
-    const nextNumber = randNumber + increaseNumber;
-    randNumber = nextNumber;
+    const nextNumber = randomNumber + (increaseNumber * i);
     progressionArray.push(nextNumber);
   }
   return progressionArray;
@@ -16,8 +15,8 @@ const makeProgression = (progressionArray, randNumber, increaseNumber) => {
 
 const getQuestionAndAnswer = () => {
   const progressionArray = [];
-  const randomNumber = generateRandomNumber();
-  const increaseNumber = generateRandomNumber();
+  const randomNumber = generateRandomNumber(1, 100);
+  const increaseNumber = generateRandomNumber(1, 100);
   makeProgression(progressionArray, randomNumber, increaseNumber);
   const a = Math.floor(Math.random() * progressionArray.length);
   const correctAnswer = progressionArray[a];

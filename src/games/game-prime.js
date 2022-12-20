@@ -14,7 +14,7 @@ const isPrime = (randomNumber, i) => {
 
 const getQuestionAndAnswer = () => {
   let correctAnswer;
-  const randomNumber = generateRandomNumber();
+  const randomNumber = generateRandomNumber(1, 100);
   let count = 0;
   if (randomNumber === 1) {
     correctAnswer = 'yes';

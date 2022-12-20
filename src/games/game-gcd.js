@@ -25,8 +25,8 @@ const countGsd = (firstrandomNumber, secondrandomNumber) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const firstrandomNumber = generateRandomNumber();
-  const secondrandomNumber = generateRandomNumber();
+  const firstrandomNumber = generateRandomNumber(1, 100);
+  const secondrandomNumber = generateRandomNumber(1, 100);
   const question = [`${firstrandomNumber} ${secondrandomNumber}`].join(' ');
   countGsd(firstrandomNumber, secondrandomNumber);
   return [question, String(correctAnswer)];

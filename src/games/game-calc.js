@@ -25,9 +25,9 @@ const calculation = (firstrandomNumber, operation, secondrandomNumber) => {
 
 const getQuestionAndAnswer = () => {
   const operations = ['+', '-', '*'];
-  const operation = operations[Math.floor(Math.random() * operations.length)];
-  const firstrandomNumber = generateRandomNumber();
-  const secondrandomNumber = generateRandomNumber();
+  const operation = operations[generateRandomNumber(0, operations.length)];
+  const firstrandomNumber = generateRandomNumber(1, 100);
+  const secondrandomNumber = generateRandomNumber(1, 100);
   calculation(firstrandomNumber, operation, secondrandomNumber);
   const question = [firstrandomNumber, operation, secondrandomNumber].join(' ');
   return [question, String(correctAnswer)];

@@ -17,7 +17,7 @@ const isEven = (number) => {
 
 const getQuestionAndAnswer = () => {
   let answer;
-  const number = generateRandomNumber();
+  const number = generateRandomNumber(1, 100);
   isEven(number);
   if (result === true) {
     answer = 'yes';
