@@ -17,7 +17,7 @@ const makeProgression = (randomNumber, increaseNumber) => {
 const getQuestionAndAnswer = () => {
   const randomNumber = generateRandomNumber(1, 100);
   const increaseNumber = generateRandomNumber(1, 100);
-  makeProgression(randomNumber, increaseNumber);
+  const progression = makeProgression(randomNumber, increaseNumber);
   const randomSymbol = Math.floor(Math.random() * progression.length);
   const correctAnswer = progression[randomSymbol];
   progression[randomSymbol] = '..';
