@@ -1,34 +1,31 @@
-/* eslint-disable no-unreachable-loop */
 /* eslint-disable import/extensions */
 import playGame from '../index.js';
 import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
-let correctAnswer;
 
-const countGsd = (firstrandomNumber, secondrandomNumber) => {
+const countGsd = (firstNumber, secondNumber) => {
   let smallestNumber;
-  if (firstrandomNumber < secondrandomNumber) {
-    smallestNumber = firstrandomNumber;
-  } else if (secondrandomNumber < firstrandomNumber) {
-    smallestNumber = secondrandomNumber;
+  if (firstNumber < secondNumber) {
+    smallestNumber = firstNumber;
+  } else if (secondNumber < firstNumber) {
+    smallestNumber = secondNumber;
   }
   for (let i = smallestNumber; i > 0; i -= 1) {
-    if (firstrandomNumber % i === 0 && secondrandomNumber % i === 0) {
-      correctAnswer = i;
-      break;
+    if (firstNumber % i === 0 && secondNumber % i === 0) {
+      return i;
     }
   }
-  if (firstrandomNumber === secondrandomNumber) {
-    correctAnswer = firstrandomNumber;
+  if (firstNumber === secondNumber) {
+    return firstNumber;
   }
 };
 
 const getQuestionAndAnswer = () => {
-  const firstrandomNumber = generateRandomNumber(1, 100);
-  const secondrandomNumber = generateRandomNumber(1, 100);
-  const question = [`${firstrandomNumber} ${secondrandomNumber}`].join(' ');
-  countGsd(firstrandomNumber, secondrandomNumber);
+  const firstNumber = generateRandomNumber(1, 100);
+  const secondNumber = generateRandomNumber(1, 100);
+  const question = [`${firstNumber} ${secondNumber}`].join(' ');
+  const correctAnswer = countGsd(firstNumber, secondNumber);
   return [question, String(correctAnswer)];
 };
 

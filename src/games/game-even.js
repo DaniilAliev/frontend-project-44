@@ -1,25 +1,20 @@
-/* eslint-disable no-unreachable-loop */
 /* eslint-disable import/extensions */
 import playGame from '../index.js';
 import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-let result;
 
 const isEven = (number) => {
   if (number % 2 === 0) {
-    result = true;
-  } else {
-    result = false;
+    return true;
   }
-  return result;
+  return false;
 };
 
 const getQuestionAndAnswer = () => {
   let answer;
   const number = generateRandomNumber(1, 100);
-  isEven(number);
-  if (result === true) {
+  if (isEven(number)) {
     answer = 'yes';
   } else {
     answer = 'no';

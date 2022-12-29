@@ -1,23 +1,18 @@
-/* eslint-disable no-unreachable-loop */
 /* eslint-disable import/extensions */
 
 import playGame from '../index.js';
 import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'What is the result of the expression?';
-let correctAnswer;
 
-const calculation = (firstrandomNumber, operation, secondrandomNumber) => {
+const calculation = (firstNumber, operation, secondNumber) => {
   switch (operation) {
     case ('+'):
-      correctAnswer = firstrandomNumber + secondrandomNumber;
-      return correctAnswer;
+      return firstNumber + secondNumber;
     case ('-'):
-      correctAnswer = firstrandomNumber - secondrandomNumber;
-      return correctAnswer;
+      return firstNumber - secondNumber;
     case ('*'):
-      correctAnswer = firstrandomNumber * secondrandomNumber;
-      return correctAnswer;
+      return firstNumber * secondNumber;
     default:
       return null;
   }
@@ -26,10 +21,10 @@ const calculation = (firstrandomNumber, operation, secondrandomNumber) => {
 const getQuestionAndAnswer = () => {
   const operations = ['+', '-', '*'];
   const operation = operations[generateRandomNumber(0, (operations.length - 1))];
-  const firstrandomNumber = generateRandomNumber(1, 100);
-  const secondrandomNumber = generateRandomNumber(1, 100);
-  calculation(firstrandomNumber, operation, secondrandomNumber);
-  const question = [firstrandomNumber, operation, secondrandomNumber].join(' ');
+  const firstNumber = generateRandomNumber(1, 100);
+  const secondNumber = generateRandomNumber(1, 100);
+  const correctAnswer = calculation(firstNumber, operation, secondNumber);
+  const question = [firstNumber, operation, secondNumber].join(' ');
   return [question, String(correctAnswer)];
 };
 
