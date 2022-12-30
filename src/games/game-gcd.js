@@ -19,6 +19,7 @@ const countGsd = (firstNumber, secondNumber) => {
   if (firstNumber === secondNumber) {
     return firstNumber;
   }
+  return '';
 };
 
 const getQuestionAndAnswer = () => {

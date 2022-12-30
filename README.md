@@ -16,13 +16,13 @@
 
 ## Screenshots:
 
-[brain-calc works](https://disk.yandex.ru/i/e1smHr9ZCuHhOg);
-[brain-calc fail](https://disk.yandex.ru/i/Lg9W5lsSG7oEfg);
-[brain-even works](https://disk.yandex.ru/i/1JK9b49bPr2WRg);
-[brain-even fail](https://disk.yandex.ru/i/nEzMTGkDMNOgeg);
-[brain-gcd works](https://disk.yandex.ru/i/KIBu1ORBXnl72Q);
-[brain-gcd fail](https://disk.yandex.ru/i/-2wJkpeJTpY1Dw);
-[brain-prime works](https://disk.yandex.ru/i/oP4tIVoyJnbvYA);
-[brain-prime fail](https://disk.yandex.ru/i/9Nzi43gXTLn-PQ);
-[brain-progression works](https://disk.yandex.ru/i/G2tmVMJhJoyVJw);
-[brain-progression fail](https://disk.yandex.ru/i/8u0XOth4_sszXw);
+- [brain-calc works](https://disk.yandex.ru/i/e1smHr9ZCuHhOg);
+- [brain-calc fail](https://disk.yandex.ru/i/Lg9W5lsSG7oEfg);
+- [brain-even works](https://disk.yandex.ru/i/1JK9b49bPr2WRg);
+- [brain-even fail](https://disk.yandex.ru/i/nEzMTGkDMNOgeg);
+- [brain-gcd works](https://disk.yandex.ru/i/KIBu1ORBXnl72Q);
+- [brain-gcd fail](https://disk.yandex.ru/i/-2wJkpeJTpY1Dw);
+- [brain-prime works](https://disk.yandex.ru/i/oP4tIVoyJnbvYA);
+- [brain-prime fail](https://disk.yandex.ru/i/9Nzi43gXTLn-PQ);
+- [brain-progression works](https://disk.yandex.ru/i/G2tmVMJhJoyVJw);
+- [brain-progression fail](https://disk.yandex.ru/i/8u0XOth4_sszXw);
