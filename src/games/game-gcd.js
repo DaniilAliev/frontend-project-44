@@ -4,7 +4,7 @@ import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Find the greatest common divisor of given numbers.';
 
-const countGsd = (firstNumber, secondNumber) => {
+const countGcd = (firstNumber, secondNumber) => {
   let smallestNumber;
   if (firstNumber < secondNumber) {
     smallestNumber = firstNumber;
@@ -19,14 +19,14 @@ const countGsd = (firstNumber, secondNumber) => {
   if (firstNumber === secondNumber) {
     return firstNumber;
   }
-  return '';
+  return 1;
 };
 
 const getQuestionAndAnswer = () => {
   const firstNumber = generateRandomNumber(1, 100);
   const secondNumber = generateRandomNumber(1, 100);
   const question = [`${firstNumber} ${secondNumber}`].join(' ');
-  const correctAnswer = countGsd(firstNumber, secondNumber);
+  const correctAnswer = countGcd(firstNumber, secondNumber);
   return [question, String(correctAnswer)];
 };
 

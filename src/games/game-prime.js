@@ -3,13 +3,12 @@ import playGame from '../index.js';
 import generateRandomNumber from '../RandomNumber.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-let result;
 
 const isPrime = (randomNumber, i) => {
   if (randomNumber % i === 0) {
-    result = true;
+    return true;
   }
-  result = false;
+  return false;
 };
 
 const getQuestionAndAnswer = () => {
@@ -22,7 +21,7 @@ const getQuestionAndAnswer = () => {
   for (let i = 0; i < randomNumber; i += 1) {
     if (randomNumber % i === 0) {
       isPrime(randomNumber, i);
-      if (result === true) {
+      if (isPrime(randomNumber, i)) {
         correctAnswer = 'yes';
       }
       count += 1;
