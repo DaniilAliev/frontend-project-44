@@ -20,7 +20,6 @@ const getQuestionAndAnswer = () => {
   }
   for (let i = 0; i < randomNumber; i += 1) {
     if (randomNumber % i === 0) {
-      isPrime(randomNumber, i);
       if (isPrime(randomNumber, i)) {
         correctAnswer = 'yes';
       }
